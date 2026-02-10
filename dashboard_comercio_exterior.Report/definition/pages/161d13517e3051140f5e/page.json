@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "161d13517e3051140f5e",
+  "displayName": "Capa",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "pageBinding": {
+    "name": "8e1e5673f0f2b06f5f40",
+    "type": "Drillthrough",
+    "parameters": []
+  },
+  "type": "Drillthrough"
+}
