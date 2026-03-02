@@ -37,6 +37,10 @@ O painel foi desenhado para investidores, focado em três pilares:
 
 O dashboard interativo pode ser acessado por este [Link](https://app.powerbi.com/view?r=eyJrIjoiZTU2ZDc1YWItZDc5ZS00YTVjLTliOGQtNWRmYmMyYjY1N2VlIiwidCI6IjU3NTI5OTdmLTBkODUtNDI0My04ZjgxLTNiYmZlMTI5ODhjYiJ9&pageName=161d13517e3051140f5e).
 
+Exemplo do dashboard:
+
+![print dashboard](imagens/visao_executiva.png)
+
 ## Insights 
 1. Dinâmica de Valor e Balança Comercial
     * Inversão no Segmento Premium
