@@ -6,7 +6,7 @@
     "y": 48.000000000000007,
     "z": 3000,
     "height": 80,
-    "width": 464,
+    "width": 816,
     "tabOrder": 3000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "GEOINTELIGÊNCIA",
+                    "value": "GEOINTELIGÊNCIA (TOP 5)",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "36pt",
