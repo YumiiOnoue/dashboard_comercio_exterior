@@ -1,9 +1,0 @@
-relationship e4b2140e-7a6d-404d-a535-cfb1996b8116
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Calendario.Date
-	toColumn: LocalDateTable_099889f4-0d50-484f-b2dd-716c038c24d9.Date
-
-relationship 27ec7866-bf30-fd4c-73d8-b84f73a48b8f
-	fromColumn: fato_comercio.Data
-	toColumn: Calendario.Date
-
