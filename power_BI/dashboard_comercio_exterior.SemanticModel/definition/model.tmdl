@@ -1,0 +1,22 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["exportacao_2010_2024","importacao_2010_2024","fato_comercio","Medidas"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_9a0d79e1-df62-47d8-bbb7-b2203608ea4b
+ref table Calendario
+ref table LocalDateTable_099889f4-0d50-484f-b2dd-716c038c24d9
+ref table fato_comercio
+ref table Medidas
+
+ref cultureInfo pt-BR
+
