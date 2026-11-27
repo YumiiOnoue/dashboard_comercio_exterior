@@ -52,20 +52,20 @@ O dashboard foi organizado em três páginas analíticas:
 
 Apresenta um panorama do comércio exterior brasileiro de chá verde, permitindo comparar os fluxos de importação e exportação.
 
-[](/imagens/visao_geral.png)
+![Visão Geral](/imagens/visao_geral.png)
 
 
 ### 2. Mercados e Distribuição Geográfica
 
 Investiga a distribuição geográfica das operações e a participação dos principais parceiros comerciais.
 
-[](/imagens/mercado_distribuicao.png)
+![Mercados e Distribuição Geográfica](/imagens/mercado_distribuicao.png)
 
 ### 3. Valores Unitários e Custos
 
 Analisa a evolução dos valores negociados por quilograma e a composição dos custos adicionais nas importações.
 
-[](/imagens/valores_unitarios_custos.png)
+![Valores Unitários e Custos](/imagens/valores_unitarios_custos.png)
 
 Os painéis possuem filtros interativos por ano, NCM e país parceiro.
 
