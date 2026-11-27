@@ -1,0 +1,144 @@
+table fato_exportacao
+	lineageTag: f68853f3-e83d-4f7e-aa56-b00aed1bafc3
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 92c14a28-0df9-4650-a1ee-6ad4c05577a0
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: dbf83d68-af2c-4c01-99a3-54b8cdd28b52
+		summarizeBy: sum
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		dataType: int64
+		formatString: 0
+		lineageTag: 690f28e0-9c08-4648-8223-e3915e5e21fa
+		summarizeBy: sum
+		sourceColumn: Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UF do Produto'
+		dataType: string
+		lineageTag: 3f3d394c-a3f6-44e9-9c72-dc8ea4e5b1fd
+		summarizeBy: none
+		sourceColumn: UF do Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Países
+		dataType: string
+		lineageTag: c20f01d8-0b75-41bb-bb75-62c04f567a0d
+		summarizeBy: none
+		sourceColumn: Países
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código NCM'
+		dataType: string
+		lineageTag: cf167992-f1f5-485f-8cf3-d4c1daf328ac
+		summarizeBy: none
+		sourceColumn: Código NCM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descrição NCM'
+		dataType: string
+		lineageTag: 13b81eae-d059-4360-af40-2d0e31ba86ec
+		summarizeBy: none
+		sourceColumn: Descrição NCM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor US$ FOB'
+		dataType: int64
+		formatString: 0
+		lineageTag: 83de7d78-1660-4ce5-8f52-ed5a4fa2a697
+		summarizeBy: sum
+		sourceColumn: Valor US$ FOB
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quilograma Líquido'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4edb0b94-d785-436a-b4b4-ddbf63de195c
+		summarizeBy: sum
+		sourceColumn: Quilograma Líquido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fluxo
+		dataType: string
+		lineageTag: b6b0bbf6-0825-4e3e-8064-293535174a53
+		summarizeBy: none
+		sourceColumn: Fluxo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UF para Mapa'
+		dataType: string
+		lineageTag: 8d8a72ad-4869-4065-ab29-1d43eb3350af
+		summarizeBy: none
+		sourceColumn: UF para Mapa
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_exportacao = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\yumi_\Documents\GitHub\dashboard_comercio_exterior\dados\exportacao_2010_2024.csv"), [Delimiter = ";", Columns = 8, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Ano", Int64.Type}, {"Mês", type text}, {"UF do Produto", type text}, {"Países", type text}, {"Código NCM", type text}, {"Descrição NCM", type text}, {"Valor US$ FOB", Int64.Type}, {"Quilograma Líquido", Int64.Type}}),
+				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(#"Tipo Alterado", "Mês", Splitter.SplitTextByDelimiter(".", QuoteStyle.Csv), {"Mês.1", "Mês.2"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"Mês.1", Int64.Type}, {"Mês.2", type text}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado1",{{"Mês.2", "Mês"}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Colunas Renomeadas", "Data", each #date([Ano], [Mês.1], 1)),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Personalização Adicionada", each true),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Data", type date}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado2",{"Mês"}),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Colunas Removidas",{{"Mês.1", "Mês"}}),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Colunas Renomeadas1",{"Data", "Ano", "Mês", "UF do Produto", "Países", "Código NCM", "Descrição NCM", "Valor US$ FOB", "Quilograma Líquido"}),
+				    #"Personalização Adicionada1" = Table.AddColumn(#"Colunas Reordenadas", "Fluxo", each "Exportação"),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Fluxo", type text}}),
+				    #"Texto Limpo" = Table.TransformColumns(#"Tipo Alterado3",{{"Países", Text.Clean, type text}, {"UF do Produto", Text.Clean, type text}, {"Descrição NCM", Text.Clean, type text}, {"Código NCM", Text.Clean, type text}}),
+				  #"Personalização adicionada 1" = Table.TransformColumnTypes(Table.AddColumn(#"Texto Limpo", "UF para Mapa", each let
+				    UF = Text.Upper(Text.Trim([UF do Produto]))
+				in
+				    if List.Contains(
+				        {
+				            "ACRE", "ALAGOAS", "AMAPÁ", "AMAZONAS",
+				            "BAHIA", "CEARÁ", "DISTRITO FEDERAL",
+				            "ESPÍRITO SANTO", "GOIÁS", "MARANHÃO",
+				            "MATO GROSSO", "MATO GROSSO DO SUL",
+				            "MINAS GERAIS", "PARÁ", "PARAÍBA",
+				            "PARANÁ", "PERNAMBUCO", "PIAUÍ",
+				            "RIO DE JANEIRO", "RIO GRANDE DO NORTE",
+				            "RIO GRANDE DO SUL", "RONDÔNIA", "RORAIMA",
+				            "SANTA CATARINA", "SÃO PAULO", "SERGIPE",
+				            "TOCANTINS"
+				        },
+				        UF
+				    )
+				    then Text.Proper(UF)
+				    else null), {{"UF para Mapa", type text}})
+				in
+				    #"Personalização adicionada 1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

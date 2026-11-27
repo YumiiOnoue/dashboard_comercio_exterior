@@ -1,0 +1,65 @@
+table dim_ncm
+	lineageTag: d88116c8-40c4-416b-9e5d-312899395f73
+
+	column 'Código NCM'
+		dataType: string
+		lineageTag: 4e383c42-553f-43fd-b52f-f6e62dff4efe
+		summarizeBy: none
+		sourceColumn: Código NCM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descrição NCM'
+		dataType: string
+		lineageTag: feb66250-8d69-46ea-8f3f-33f3d1f4d751
+		summarizeBy: none
+		sourceColumn: Descrição NCM
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_ncm = m
+		mode: import
+		source =
+				let
+				    Exportacao = Table.SelectColumns(
+				        fato_exportacao,
+				        {
+				            "Código NCM",
+				            "Descrição NCM"
+				        }
+				    ),
+				
+				    Importacao = Table.SelectColumns(
+				        fato_importacao,
+				        {
+				            "Código NCM",
+				            "Descrição NCM"
+				        }
+				    ),
+				
+				    NCMsCombinados = Table.Combine({
+				        Exportacao,
+				        Importacao
+				    }),
+				
+				    NCMsSemNulos = Table.SelectRows(
+				        NCMsCombinados,
+				        each [Código NCM] <> null
+				            and Text.Trim([Código NCM]) <> ""
+				    ),
+				
+				    NCMsDistintos = Table.Distinct(
+				        NCMsSemNulos
+				    ),
+				
+				    NCMsOrdenados = Table.Sort(
+				        NCMsDistintos,
+				        {{"Código NCM", Order.Ascending}}
+				    ),
+				  #"Valor substituído" = Table.ReplaceValue(NCMsOrdenados, "Chá verde (não fermentado) em embalagens imediatas de conteúdo não superior a 3 kg", "Embalagens até 3 kg", Replacer.ReplaceText, {"Descrição NCM"}),
+				  #"Valor substituído 1" = Table.ReplaceValue(#"Valor substituído", "Chá verde (não fermentado) apresentado de qualquer outra forma", "Outras apresentações", Replacer.ReplaceText, {"Descrição NCM"})
+				in
+				    #"Valor substituído 1"
+
+	annotation PBI_ResultType = Table
+

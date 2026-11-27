@@ -1,0 +1,48 @@
+table dim_paises
+	lineageTag: 982cbd47-810d-4580-abe2-d09c08bc17a0
+
+	column Países
+		dataType: string
+		lineageTag: 1421bb9a-6036-4616-afca-fdd6622dfd02
+		summarizeBy: none
+		sourceColumn: Países
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_paises = m
+		mode: import
+		source =
+				let
+				    Exportacao = Table.SelectColumns(
+				        fato_exportacao,
+				        {"Países"}
+				    ),
+				
+				    Importacao = Table.SelectColumns(
+				        fato_importacao,
+				        {"Países"}
+				    ),
+				
+				    PaisesCombinados = Table.Combine({
+				        Exportacao,
+				        Importacao
+				    }),
+				
+				    PaisesSemNulos = Table.SelectRows(
+				        PaisesCombinados,
+				        each [Países] <> null and Text.Trim([Países]) <> ""
+				    ),
+				
+				    PaisesDistintos = Table.Distinct(
+				        PaisesSemNulos
+				    ),
+				
+				    PaisesOrdenados = Table.Sort(
+				        PaisesDistintos,
+				        {{"Países", Order.Ascending}}
+				    )
+				in
+				    PaisesOrdenados
+
+	annotation PBI_ResultType = Table
+

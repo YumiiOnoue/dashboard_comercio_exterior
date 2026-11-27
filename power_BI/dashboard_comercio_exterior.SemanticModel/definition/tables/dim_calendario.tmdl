@@ -1,0 +1,134 @@
+table dim_calendario
+	lineageTag: 62556162-647c-428f-bb88-72f3eb6ee852
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: Long Date
+		lineageTag: 80744510-d4de-45a4-9270-5f3e7e7d4549
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano
+		formatString: 0
+		lineageTag: 0b518080-cb3f-4b45-b7ef-de65df5788ee
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = User
+
+	column Trimestre
+		lineageTag: ac107e8b-a257-4d55-887f-602d4491f101
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNum
+		formatString: 0
+		lineageTag: 75323e3a-6d60-4d6e-9945-1da47158b4ec
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MesNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeMes
+		lineageTag: be666127-4dbc-45ee-b4f2-9f03b5fd685b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [NomeMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesAbrev
+		lineageTag: 4d4b6b3b-ffc9-4037-879b-f78752209a15
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MesAbrev]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnoMesNum
+		formatString: 0
+		lineageTag: e4778c5c-a727-4c1f-a7ca-7ed1bc0f52f0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [AnoMesNum]
+
+		annotation SummarizationSetBy = User
+
+	column AnoMes
+		formatString: General Date
+		lineageTag: 3ecfe2c0-c366-4c58-84c7-b1b2a9f7f31a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [AnoMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column TrimestreAno
+		lineageTag: c0f77435-c117-4a69-bc3e-1ecf3821da08
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [TrimestreAno]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemanaNum
+		formatString: 0
+		lineageTag: 052448fd-893d-4167-93ad-fe02a7429279
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [DiaSemanaNum]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemana
+		lineageTag: 0ae41e13-25b3-4848-85bd-400d17415cc4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiaSemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemanaAbrev
+		lineageTag: b30aec15-a44f-44a5-bc26-197c397b992a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiaSemanaAbrev]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_calendario = calculated
+		mode: import
+		source =
+				
+				VAR DataInicial = DATE(2010, 1, 1)
+				VAR DataFinal = DATE(2024, 12, 31)
+				
+				RETURN
+				ADDCOLUMNS(
+				    CALENDAR(DataInicial, DataFinal),
+				    "Ano", YEAR([Date]),
+				    "MesNum", MONTH([Date]),
+				    "NomeMes", FORMAT([Date], "mmmm"),
+				    "MesAbrev", FORMAT([Date], "mmm"),
+				    "AnoMesNum", YEAR([Date]) * 100 + MONTH([Date]),
+				    "AnoMes", DATE(YEAR([Date]), MONTH([Date]), 1),
+				    "Trimestre", "T" & FORMAT([Date], "q"),
+				    "TrimestreAno", "T" & FORMAT([Date], "q") & "/" & YEAR([Date]),
+				    "DiaSemanaNum", WEEKDAY([Date], 2), -- 1 = Segunda, 7 = Domingo
+				    "DiaSemana", FORMAT([Date], "dddd"),
+				    "DiaSemanaAbrev", FORMAT([Date], "ddd")
+				)
+
+	annotation PBI_Id = a6c0af94a1444940b63e673a8b9640ba
+

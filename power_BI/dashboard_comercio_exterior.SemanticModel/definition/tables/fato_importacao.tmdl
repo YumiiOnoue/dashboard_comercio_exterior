@@ -1,0 +1,170 @@
+table fato_importacao
+	lineageTag: 80edbee3-1513-40f5-b9eb-836f5958241b
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ccc9b617-b758-418c-9343-2a70a0e86b4b
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c455d3c-ee9a-4b14-a20e-2287febda5a1
+		summarizeBy: sum
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a18fed4-365c-4483-b016-dfa62476d3b6
+		summarizeBy: sum
+		sourceColumn: Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UF do Produto'
+		dataType: string
+		lineageTag: 024075da-b92f-49c9-bff4-d87d07f16cf2
+		summarizeBy: none
+		sourceColumn: UF do Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Países
+		dataType: string
+		lineageTag: dd1e4bd9-8228-46de-9f29-0dc2533baeed
+		summarizeBy: none
+		sourceColumn: Países
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código NCM'
+		dataType: string
+		lineageTag: d4c275db-43fe-42d3-8256-aaaab23c5508
+		summarizeBy: none
+		sourceColumn: Código NCM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descrição NCM'
+		dataType: string
+		lineageTag: f9fa426f-7139-4a06-aa96-d126cf5c7a98
+		summarizeBy: none
+		sourceColumn: Descrição NCM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor US$ FOB'
+		dataType: int64
+		formatString: 0
+		lineageTag: 039049dc-c755-4de6-beae-1149e791a3b6
+		summarizeBy: sum
+		sourceColumn: Valor US$ FOB
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'US$ Frete'
+		dataType: int64
+		formatString: 0
+		lineageTag: 45f776dd-82fd-45a5-b9e0-454bc7449875
+		summarizeBy: sum
+		sourceColumn: US$ Frete
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'US$ Seguro'
+		dataType: int64
+		formatString: 0
+		lineageTag: cd91345e-b522-429c-9064-e73fbaaca51f
+		summarizeBy: sum
+		sourceColumn: US$ Seguro
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor US$ CIF'
+		dataType: int64
+		formatString: 0
+		lineageTag: bc15a44f-332c-40d6-8e64-1121d751de96
+		summarizeBy: sum
+		sourceColumn: Valor US$ CIF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quilograma Líquido'
+		dataType: int64
+		formatString: 0
+		lineageTag: e806e0f3-c178-4aa5-905b-71cfc5a9bc89
+		summarizeBy: sum
+		sourceColumn: Quilograma Líquido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fluxo
+		dataType: string
+		lineageTag: 625f3cc9-5088-4aa6-9c64-040af35b0d82
+		summarizeBy: none
+		sourceColumn: Fluxo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UF para Mapa'
+		dataType: string
+		lineageTag: 41fdc541-800e-47f2-91a7-b9477f5b0320
+		summarizeBy: none
+		sourceColumn: UF para Mapa
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_importacao = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\yumi_\Documents\GitHub\dashboard_comercio_exterior\dados\importacao_2010_2024.csv"), [Delimiter = ";", Columns = 11, Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Ano", Int64.Type}, {"Mês", type text}, {"UF do Produto", type text}, {"Países", type text}, {"Código NCM", type text}, {"Descrição NCM", type text}, {"Valor US$ FOB", Int64.Type}, {"US$ Frete", Int64.Type}, {"US$ Seguro", Int64.Type}, {"Valor US$ CIF", Int64.Type}, {"Quilograma Líquido", Int64.Type}}),
+				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(#"Tipo Alterado", "Mês", Splitter.SplitTextByDelimiter(".", QuoteStyle.Csv), {"Mês.1", "Mês.2"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"Mês.1", Int64.Type}, {"Mês.2", type text}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado1",{{"Mês.2", "Mês"}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Colunas Renomeadas",{"Mês"}),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Colunas Removidas",{{"Mês.1", "Mês"}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Colunas Renomeadas1", "Data", each #date([Ano], [Mês], 1)),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Personalização Adicionada",{"Data", "Ano", "Mês", "UF do Produto", "Países", "Código NCM", "Descrição NCM", "Valor US$ FOB", "US$ Frete", "US$ Seguro", "Valor US$ CIF", "Quilograma Líquido"}),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Colunas Reordenadas",{{"Data", type date}}),
+				    #"Personalização Adicionada1" = Table.AddColumn(#"Tipo Alterado2", "Fluxo", each "Importação"),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Fluxo", type text}}),
+				    #"Texto Limpo" = Table.TransformColumns(#"Tipo Alterado3",{{"UF do Produto", Text.Clean, type text}, {"Países", Text.Clean, type text}, {"Código NCM", Text.Clean, type text}, {"Descrição NCM", Text.Clean, type text}}),
+				  #"Personalização adicionada 1" = Table.TransformColumnTypes(Table.AddColumn(#"Texto Limpo", "UF para Mapa", each let
+				    UF = Text.Upper(Text.Trim([UF do Produto]))
+				in
+				    if List.Contains(
+				        {
+				            "ACRE", "ALAGOAS", "AMAPÁ", "AMAZONAS",
+				            "BAHIA", "CEARÁ", "DISTRITO FEDERAL",
+				            "ESPÍRITO SANTO", "GOIÁS", "MARANHÃO",
+				            "MATO GROSSO", "MATO GROSSO DO SUL",
+				            "MINAS GERAIS", "PARÁ", "PARAÍBA",
+				            "PARANÁ", "PERNAMBUCO", "PIAUÍ",
+				            "RIO DE JANEIRO", "RIO GRANDE DO NORTE",
+				            "RIO GRANDE DO SUL", "RONDÔNIA", "RORAIMA",
+				            "SANTA CATARINA", "SÃO PAULO", "SERGIPE",
+				            "TOCANTINS"
+				        },
+				        UF
+				    )
+				    then Text.Proper(UF)
+				    else null), {{"UF para Mapa", type text}})
+				in
+				    #"Personalização adicionada 1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

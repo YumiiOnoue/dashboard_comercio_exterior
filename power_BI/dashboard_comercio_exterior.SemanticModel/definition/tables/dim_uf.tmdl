@@ -1,0 +1,56 @@
+table dim_uf
+	lineageTag: efc70ef2-0ab7-434d-866d-3ff54bc36a64
+
+	column UF
+		dataType: string
+		lineageTag: 0e3be67c-8530-49de-8a12-4de597e69fcc
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column País = "Brasil"
+		lineageTag: a6ce9239-a3ea-4846-9398-2d1f4c8433d3
+		dataCategory: Country
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_uf = m
+		mode: import
+		source =
+				let
+				  Origem = let
+				    Exportacao = Table.SelectColumns(
+				        fato_exportacao,
+				        {"UF para Mapa"}
+				    ),
+				    Importacao = Table.SelectColumns(
+				        fato_importacao,
+				        {"UF para Mapa"}
+				    ),
+				    UFsCombinadas = Table.Combine({
+				        Exportacao,
+				        Importacao
+				    }),
+				    UFsValidas = Table.SelectRows(
+				        UFsCombinadas,
+				        each [UF para Mapa] <> null
+				    ),
+				    UFsDistintas = Table.Distinct(UFsValidas),
+				    UFsRenomeadas = Table.RenameColumns(
+				        UFsDistintas,
+				        {{"UF para Mapa", "UF"}}
+				    ),
+				    UFsOrdenadas = Table.Sort(
+				        UFsRenomeadas,
+				        {{"UF", Order.Ascending}}
+				    )
+				in
+				    UFsOrdenadas
+				in
+				  Origem
+
+	annotation PBI_ResultType = Table
+
