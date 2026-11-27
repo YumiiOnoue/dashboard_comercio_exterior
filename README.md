@@ -1,87 +1,180 @@
-# Green Tea Analytics: Panorama do Matcha no Comércio Exterior Brasileiro
+# Green Tea Analytics: Análise do Comércio Exterior Brasileiro de Chá Verde (2010–2024)
 
-## Sobre o Projeto
-O Matcha não é apenas um chá; é um superalimento de alto valor agregado que ocupa um nicho estratégico no agronegócio global. Atualmente, o mercado enfrenta um momento crítico: o aumento da demanda por produtos funcionais versus a escassez de oferta causada pelas mudanças climáticas nas regiões produtoras.
+## Sobre o projeto
 
-Este projeto utiliza inteligência de dados para monitorar como o Brasil se posiciona nesse cenário, analisando o fluxo de importação para abastecer o mercado interno e o potencial estratégico de exportação.
+O Green Tea Analytics é um projeto de análise de dados desenvolvido em Power BI para investigar o comportamento do comércio exterior brasileiro de chá verde entre 2010 e 2024.
 
-### O Poder do Ativo: Valor Agregado e Saudabilidade
-O destaque do Matcha no mercado global deve-se ao seu conjunto poderoso de benefícios funcionais, que o diferencia de chás verdes convencionais:
+A partir de dados públicos do Comex Stat, são analisadas as operações de importação e exportação, considerando valores financeiros, volumes negociados, países parceiros, distribuição geográfica e custos associados às importações.
 
-* **Antioxidantes de Alta Performance:** Rica fonte de catequinas, que combatem radicais livres e promovem a proteção celular.
-* **Foco Cognitivo (L-Teanina):** Promove clareza mental e relaxamento sem sonolência, um diferencial competitivo para o público de alta performance.
-* **Energia Estável:** Fornece cafeína de liberação prolongada, evitando os picos de ansiedade comuns em outras bebidas estimulantes.
-* **Bem-estar Sistêmico:** Contribui para a saúde cardiovascular, metabolismo e fortalecimento do sistema imunológico.
+O objetivo é transformar dados de comércio exterior em indicadores e informações que permitam compreender a dinâmica comercial do produto, identificar tendências e avaliar a evolução dos valores negociados.
 
-### Dinâmica de Mercado e Comercialização
-A popularidade do Matcha no varejo e no food service é impulsionada pela convergência entre apelo visual e saudabilidade. As redes sociais atuam como o principal motor de disseminação, transformando o produto em um fenômeno cultural e gastronômico.
+## Objetivo e perguntas de negócio
 
-Somado a isso, o fortalecimento do turismo no Japão e a flutuação cambial favorável (Iene) elevaram o Matcha ao status de item de exportação prioritário. O resultado é uma procura global que, atualmente, desafia a capacidade produtiva tradicional, abrindo janelas de oportunidade para novos players e análise de dados precisas.
+O projeto busca responder às seguintes perguntas:
 
-## Desenvolvimento Técnico
-1. Engenharia de Dados e ETL
-    * **Tratamento de Dados:** Utilização de `Power Query (M)` para limpeza de caracteres especiais, normalização de NCMs e tratamento de ruídos em bases do [Comex Stat](https://comexstat.mdic.gov.br/pt/geral) (2010-2024).
-    * **Consolidação:** Unificação das bases de Importação e Exportação através de processos de Append, criando uma tabela única de `"Fato_Comercio"`.
-    * **Modelagem Star Schema:** Criação de uma Tabela Calendário (DAX) para habilitar análises de Time Intelligence.
+- Como evoluíram as importações e exportações brasileiras de chá verde?
+- Quais são os principais países de origem das importações e destinos das exportações?
+- Como as operações estão distribuídas entre os estados brasileiros?
+- Como evoluíram os valores negociados por quilograma?
+- Qual é a participação do frete e do seguro no valor total das importações?
 
-2. Métricas de Inteligência Comercial (DAX)
-    * **Ticket Médio por KG:** Identificação do valor unitário por categoria (Varejo vs. Granel).
-    * **Eficiência Logística:** Monitoramento do impacto do Frete e Seguro sobre o Valor CIF.
-    * **Crescimento YoY:** Comparativo de performance anualizada para detecção de tendências de mercado.
+## Escopo e fonte dos dados
 
-## Estrutura do Dashboard
-O painel foi desenhado para investidores, focado em três pilares:
-* Visão Executiva: Saldo Comercial e Corrente de Comércio.
-* Geointeligência: Origens e destinos estratégicos (Top 5 Países e UFs).
-* Análise de Pricing: Evolução de preços e volumes para detecção de janelas de compra.
+Os dados foram obtidos no Comex Stat, plataforma oficial de estatísticas de comércio exterior do Ministério do Desenvolvimento, Indústria, Comércio e Serviços (MDIC).
 
-O dashboard interativo pode ser acessado por este [Link](https://app.powerbi.com/view?r=eyJrIjoiZTU2ZDc1YWItZDc5ZS00YTVjLTliOGQtNWRmYmMyYjY1N2VlIiwidCI6IjU3NTI5OTdmLTBkODUtNDI0My04ZjgxLTNiYmZlMTI5ODhjYiJ9&pageName=161d13517e3051140f5e).
+Período analisado: janeiro de 2010 a dezembro de 2024.
 
-Exemplo do dashboard:
+Classificações NCM utilizadas:
 
-![print dashboard](imagens/visao_executiva.png)
+| Código NCM | Descrição| 
+| ---- | ---- |
+| 09021000 | Chá verde não fermentado em embalagens imediatas de conteúdo não superior a 3 kg |
+| 09022000 | Chá verde não fermentado apresentado de qualquer outra forma |
 
-## Insights 
-1. Dinâmica de Valor e Balança Comercial
-    * Inversão no Segmento Premium
-        * Embora o setor seja superavitário no geral, o segmento de Varejo (NCM 09021000) apresenta um déficit estrutural desde 2017. 
-        * As importações superam as exportações, revelando uma dependência externa para atender à demanda por produtos de alto valor agregado e conveniência.
-    * Arbitragem de Preço
-        * Em 2024, o preço médio de exportação (US$ 7,20/kg) foi quase o dobro do valor pago na importação (US$ 4,70/kg). Esse diferencial indica que o Brasil atua estrategicamente importando matéria-prima competitiva e exportando produtos processados com maior margem.
-    * Matriz de Comercialização 
-        * O volume é dominado pelo setor de Granel/Industrial (73%), enquanto o varejo ocupa 27%. Há uma oportunidade latente de verticalização para transformar o volume de granel em produtos fracionados, capturando margens superiores.
 
-2. Geopolítica e Parceiros Estratégicos
-    * Polarização de Fluxos
-        * Os Estados Unidos consolidam-se como o principal destino das exportações brasileiras. 
-        * No suprimento, a China lidera em volume de massa. 
-        * Enquanto o Japão mantém a hegemonia absoluta no fornecimento de Matcha de alta qualidade (Ceremonial Grade).
-    * Concentração Regional 
-        * A operação logística está centrada nos estados de São Paulo e Paraná. Esta centralização sugere a existência de hubs especializados e infraestrutura tributária favorável, ideais para centros de distribuição.
+**Principais variáveis:**
 
-3. Eficiência Operacional e Sazonalidade
-    * Logística e Margens 
-        * Em 2024, o custo do frete representou 8,5% do valor total das importações. Esse KPI é fundamental para estratégias de otimização de carga e proteção de margem líquida frente à volatilidade cambial.
-    * Ciclo de Demanda
-        * O período entre novembro e junho concentra os maiores picos históricos de comercialização. Este dado é vital para o planejamento de estoque de segurança e antecipação de campanhas comerciais no primeiro semestre do ano.
+* Ano e mês da operação;
+* Países parceiros;
+* UF do produto;
+* Código e descrição NCM;
+* Valor US$ FOB;
+* Quilograma líquido;
+* US$ Frete e US$ Seguro;
+* Valor US$ CIF (importações).
+* Estrutura do dashboard
 
-## Recomendações
-Com base nos dados analisados, as seguintes ações são recomendadas para investidores e gestores do setor:
+## Estrutura do dashboard
 
-1. Verticalização da Produção (Substituição de Importação)
-    * Dado que o Brasil é um forte exportador de granel, mas dependente de importações para o varejo (segmento que paga prêmios maiores), recomenda-se o investimento em plantas de envase e branding nacional. Transformar o insumo em produto final dentro do território brasileiro pode capturar a margem de lucro que hoje é enviada ao exterior.
+O dashboard foi organizado em três páginas analíticas:
 
-2. Diversificação Estratégica de Sourcing
-    * A hegemonia do Japão no fornecimento de Matcha de alta qualidade, somada às crises climáticas, representa um risco de ruptura. Recomenda-se a prospecção de parceiros em regiões alternativas (como produtores orgânicos na China ou Taiwan) para criar uma camada de segurança no suprimento, garantindo estoque mesmo em quebras de safra japonesas.
+### 1. Visão Geral
 
-3. Planejamento Logístico Antecipado
-    * Com o custo de frete representando 8,5% da operação e um pico comercial que se inicia em novembro, as empresas devem focar em contratos de frete de longo prazo e na antecipação de pedidos para o terceiro trimestre (Q3). Isso evita a volatilidade de preços logísticos de final de ano e garante que o produto esteja no Brasil antes do início da alta temporada de consumo.
+Apresenta um panorama do comércio exterior brasileiro de chá verde, permitindo comparar os fluxos de importação e exportação.
 
-4. Foco em Mercados de Alto Valor (EUA e Europa)
-    * O diferencial de preço de exportação (US$ 7,20) prova que o produto brasileiro tem aceitação premium. Recomenda-se intensificar os esforços de marketing e vendas nos Estados Unidos e União Europeia, focando na narrativa de "sustentabilidade" e "rastreabilidade", que permite sustentar o ticket médio elevado identificado no dashboard.
+[](/imagens/visao_geral.png)
 
-5. Otimização de Hubs Regionais
-    * Para novas empresas que desejam entrar no mercado, o estabelecimento de sedes ou centros de distribuição em São Paulo ou Paraná é a decisão mais eficiente. Aproveitar a "massa crítica" de infraestrutura e os incentivos fiscais já existentes nesses estados reduzirá o time-to-market e os custos de transporte interno.
+
+### 2. Mercados e Distribuição Geográfica
+
+Investiga a distribuição geográfica das operações e a participação dos principais parceiros comerciais.
+
+[](/imagens/mercado_distribuicao.png)
+
+### 3. Valores Unitários e Custos
+
+Analisa a evolução dos valores negociados por quilograma e a composição dos custos adicionais nas importações.
+
+[](/imagens/valores_unitarios_custos.png)
+
+Os painéis possuem filtros interativos por ano, NCM e país parceiro.
+
+### Acesso ao dashboard
+
+O dashboard interativo pode ser acessado pelo Power BI:
+
+[**Visualizar Green Tea Analytics**](https://app.powerbi.com/view?r=eyJrIjoiZTU2ZDc1YWItZDc5ZS00YTVjLTliOGQtNWRmYmMyYjY1N2VlIiwidCI6IjU3NTI5OTdmLTBkODUtNDI0My04ZjgxLTNiYmZlMTI5ODhjYiJ9&pageName=161d13517e3051140f5e)
+
+
+## Metodologia e modelagem de dados
+
+O projeto utiliza um modelo dimensional com duas tabelas fato independentes:
+
+- `fato_importacao`;
+- `fato_exportacao`.
+
+As tabelas compartilham dimensões de calendário, países, NCM e unidades federativas, permitindo análises integradas sem relacionar diretamente as tabelas fato.
+
+```mermaid
+erDiagram
+    DIM_CALENDARIO ||--o{ FATO_IMPORTACAO : "Data"
+    DIM_CALENDARIO ||--o{ FATO_EXPORTACAO : "Data"
+
+    DIM_PAISES ||--o{ FATO_IMPORTACAO : "País de origem"
+    DIM_PAISES ||--o{ FATO_EXPORTACAO : "País de destino"
+
+    DIM_NCM ||--o{ FATO_IMPORTACAO : "Código NCM"
+    DIM_NCM ||--o{ FATO_EXPORTACAO : "Código NCM"
+
+    DIM_UF ||--o{ FATO_IMPORTACAO : "UF"
+    DIM_UF ||--o{ FATO_EXPORTACAO : "UF"
+
+    DIM_CALENDARIO {
+        date Data PK
+        int Ano
+        int MesNumero
+        string Mes
+        string AnoMes
+        string Trimestre
+    }
+
+    DIM_PAISES {
+        string Paises PK
+    }
+
+    DIM_NCM {
+        string Codigo_NCM PK
+        string Descricao_NCM
+    }
+
+    DIM_UF {
+        string UF PK
+    }
+
+    FATO_IMPORTACAO {
+        date Data FK
+        string Paises FK
+        string Codigo_NCM FK
+        string UF_para_Mapa FK
+        string UF_do_Produto
+        decimal Valor_USD_FOB
+        decimal US_Frete
+        decimal US_Seguro
+        decimal Valor_USD_CIF
+        decimal Quilograma_Liquido
+    }
+
+    FATO_EXPORTACAO {
+        date Data FK
+        string Paises FK
+        string Codigo_NCM FK
+        string UF_para_Mapa FK
+        string UF_do_Produto
+        decimal Valor_USD_FOB
+        decimal Quilograma_Liquido
+    }
+```
+
+**Como interpretar o diagrama:**
+- Cada dimensão possui relacionamento 1:N com as duas tabelas fato.
+- `DIM_PAISES` representa países de origem nas importações e países de destino nas exportações.
+- `UF_para_Mapa` permite relacionar somente unidades federativas brasileiras válidas à dimensão `DIM_UF`.
+- `UF_do_Produto` preserva a informação original, inclusive categorias que não representam estados.
+- A tabela de importações contém frete, seguro e valor CIF; esses campos não existem na tabela de exportações.
+
+O tratamento e a preparação dos dados são realizados no Power Query, utilizando linguagem M. As medidas e os indicadores analíticos são desenvolvidos em DAX.
+
+**Principais cálculos:**
+
+| Indicador | Cálculo |
+|---|---|
+| Saldo comercial | Exportações FOB − Importações FOB |
+| FOB/kg importado | FOB importado ÷ kg importado |
+| FOB/kg exportado | FOB exportado ÷ kg exportado |
+| CIF/kg importado | CIF importado ÷ kg importado |
+| Frete/CIF | Frete ÷ CIF |
+| Seguro/CIF | Seguro ÷ CIF |
+
+Os valores unitários são calculados pela razão entre o valor financeiro total e o peso líquido total, considerando a ponderação pelo volume negociado.
+
+## Tecnologias utilizadas
+
+- **Power BI:** modelagem, indicadores e visualização de dados;
+- **Power Query (M):** tratamento e transformação dos dados;
+- **DAX:** criação de medidas e cálculos analíticos;
+- **Python:** análise exploratória e validação dos dados;
+- **Git e GitHub:** versionamento e documentação do projeto.
+
 
 ## Organização do Repositório
 ```
@@ -89,9 +182,9 @@ Com base nos dados analisados, as seguintes ações são recomendadas para inves
 |   ├── exportacao_2010_2024.csv
 |   └── importacao_2010_2024.csv
 ├── imagens/
-|   ├── matcha_latte.jpg
-|   ├── matcha_po.jpg
-│   └── planta_matcha.jpg
+|   ├── mercado_distribuicao.png
+|   ├── valores_unitarios_custos.png
+│   └── visao_geral.png
 ├── notebooks/
 │   └── analise_exploratoria.ipynb
 ├── power_BI/
@@ -102,3 +195,31 @@ Com base nos dados analisados, as seguintes ações são recomendadas para inves
 └── README.md
 
 ```
+
+## Como reproduzir o projeto
+
+Para explorar ou reproduzir o projeto localmente, siga as etapas:
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/YumiiOnoue/dashboard_comercio_exterior.git
+   ```
+
+2. **Acesse a pasta do projeto**
+   ```bash
+   cd dashboard_comercio_exterior
+   ```
+
+3. **Explore os dados**
+   
+   Os arquivos CSV de importação e exportação estão disponíveis na pasta `dados/`. Eles correspondem às operações de comércio exterior de chá verde entre 2010 e 2024.
+
+4. **Abra o projeto no Power BI Desktop**
+   
+   Acesse a pasta `power_BI/` e abra o arquivo `dashboard_comercio_exterior.pbip`.
+
+5. **Atualize os dados, se necessário**
+   
+   Verifique os caminhos das fontes de dados no Power Query e ajuste-os para o diretório local do repositório. Em seguida, atualize as consultas no Power BI.
+
+**Requisitos:** Power BI Desktop e Git. Para executar a análise exploratória, também é necessário Python com as bibliotecas utilizadas no notebook.
