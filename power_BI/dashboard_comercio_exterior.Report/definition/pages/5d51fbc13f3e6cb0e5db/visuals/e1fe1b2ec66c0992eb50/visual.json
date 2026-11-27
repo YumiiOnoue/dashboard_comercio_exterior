@@ -1,16 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "e1fe1b2ec66c0992eb50",
   "position": {
-    "x": 864,
-    "y": 368,
+    "x": 208.416844261618,
+    "y": 449.31423568089076,
     "z": 4000,
-    "height": 336,
-    "width": 384.00000000000006,
-    "tabOrder": 4000
+    "height": 244.9574598139796,
+    "width": 400.59341494440861,
+    "tabOrder": 7000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fato_comercio"
+                      "Entity": "dim_ncm"
                     }
                   },
-                  "Property": "Tipo"
+                  "Property": "Descrição NCM"
                 }
               },
-              "queryRef": "fato_comercio.Tipo",
-              "nativeQueryRef": "Tipo",
+              "queryRef": "dim_ncm.Descrição NCM",
+              "nativeQueryRef": "Descrição NCM",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fato_comercio"
-                        }
-                      },
-                      "Property": "Quilograma Líquido"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Saldo Comercial"
                 }
               },
-              "queryRef": "Sum(fato_comercio.Quilograma Líquido)",
-              "nativeQueryRef": "Soma de Quilograma Líquido"
+              "queryRef": "Medidas.Saldo Comercial",
+              "nativeQueryRef": "Saldo Comercial"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "fato_comercio"
-                      }
-                    },
-                    "Property": "Quilograma Líquido"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 0
+                "Property": "Saldo Comercial"
               }
             },
             "direction": "Descending"
@@ -95,6 +85,57 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D5A64A'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Total Importado US$"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#56866B'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Total Exportado US$"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D5A64A'"
+                    }
+                  }
+                }
+              }
+            }
           },
           "selector": {
             "data": [
@@ -106,7 +147,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "fato_comercio"
+                            "Entity": "dim_ncm"
                           }
                         },
                         "Property": "Descrição NCM"
@@ -114,7 +155,7 @@
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'\rChá verde (não fermentado) em embalagens imediatas de conteúdo não superior a 3 kg'"
+                        "Value": "'Embalagens até 3 kg'"
                       }
                     }
                   }
@@ -130,7 +171,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#40BF59'"
+                      "Value": "'#56866B'"
                     }
                   }
                 }
@@ -147,7 +188,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "fato_comercio"
+                            "Entity": "dim_ncm"
                           }
                         },
                         "Property": "Descrição NCM"
@@ -155,253 +196,7 @@
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'\rChá verde (não fermentado) apresentado de qualquer outra forma'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#40BF59'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "fato_comercio"
-                          }
-                        },
-                        "Property": "Descrição NCM"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Chá verde (não fermentado) em embalagens imediatas de conteúdo não superior a 3 kg'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3D8553'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "fato_comercio"
-                          }
-                        },
-                        "Property": "Descrição NCM"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Chá verde (não fermentado) apresentado de qualquer outra forma'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3D8553'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "fato_comercio"
-                          }
-                        },
-                        "Property": "Tipo"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Chá verde a granel'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#41B465'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "fato_comercio"
-                          }
-                        },
-                        "Property": "Tipo"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Chá verde consumo final'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3D8553'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "fato_comercio"
-                          }
-                        },
-                        "Property": "Tipo"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'A Granel'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#41B465'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "fato_comercio"
-                          }
-                        },
-                        "Property": "Tipo"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Consumo Final'"
+                        "Value": "'Outras apresentações'"
                       }
                     }
                   }
@@ -420,11 +215,58 @@
                   "Value": "true"
                 }
               }
-            },
-            "labelStyle": {
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Category, percent of total'"
+                  "Value": "true"
+                }
+              }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -434,6 +276,13 @@
       "legend": [
         {
           "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -449,28 +298,17 @@
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Participação por NCM no Saldo Comercial'"
+                }
+              }
+            },
             "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3D8553'"
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
                 }
               }
             },
@@ -480,16 +318,27 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.6
                     }
                   }
                 }
               }
             },
-            "text": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "null"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'Quantidade de Chá Verde Comercializado '"
+                  "Value": "'left'"
                 }
               }
             }
@@ -531,7 +380,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D8553'"
+                      "Value": "'#F5F4EF'"
                     }
                   }
                 }
@@ -540,7 +389,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "25D"
+                  "Value": "6D"
                 }
               }
             },
@@ -553,8 +402,66 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a04ea1fb3d829b8018f2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_ncm"
+              }
+            },
+            "Property": "Descrição NCM"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7c125a391e5772238536",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Saldo Comercial"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -2,8 +2,4118 @@ cultureInfo pt-BR
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_calendario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "MesNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.nome_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "NomeMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NomeMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_abrev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "MesAbrev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes abrev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me abrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesAbrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.ano_mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "AnoMesNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "AnoMesNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ano me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.ano_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "AnoMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AnoMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario.trimestre_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "TrimestreAno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TrimestreAno": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.dia_semana_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "DiaSemanaNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaSemanaNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dia semana number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.dia_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "DiaSemana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaSemana": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.dia_semana_abrev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_calendario",
+			          "ConceptualProperty": "DiaSemanaAbrev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana abrev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaSemanaAbrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.corrente_do_comercio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Corrente do Comercio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "corrente do comercio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.saldo_comercial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Saldo Comercial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo comercial": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_importado_US": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total Importado US$"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total importado US$": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total importado us dollar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "aggregate importado us$": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "overall importado us$": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_exportado_US": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total Exportado US$"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total exportado US$": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total exportado us dollar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "aggregate exportado us$": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "overall exportado us$": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ticket_médio_logístico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ticket Médio Logístico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket médio logístico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.peso_frete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Peso Frete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% peso frete": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage peso frete": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct peso frete": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.preço_médio_exportação_US_KG": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Preço Médio Exportação (US$/KG)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preço médio exportação (US$/KG)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "preço médio exportação": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "preço médio exportação (US$": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "preço médio exportação ( US $ KG )": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "KG)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "medida.valor_US_ano_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Valor US$ Ano Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor US$ ano anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor us dollar ano anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        }
+			      ]
+			    },
+			    "medida.crescimento_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Crescimento YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crescimento YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crescimento yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "crescimento yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_exportado_kg": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total Exportado kg"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total exportado kg": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate exportado kg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall exportado kg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_importado_kg": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total Importado kg"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total importado kg": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate importado kg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall importado kg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.volume_exportado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Volume Exportado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "volume exportado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.exportações_FOB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Exportações FOB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "exportações FOB": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.FOB_por_kg_importado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "FOB por Kg Importado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "FOB por kg importado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "US$/kg Importado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.FOB_por_kg_exportado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "FOB por Kg Exportado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "FOB por kg exportado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "US$/kg Exportado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.CIF_por_kg_importado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "CIF por Kg Importado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CIF por kg importado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CIF/kg Importado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.frete_sobre_CIF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Frete sobre CIF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "frete sobre CIF": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.seguro_sobre_CIF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Seguro sobre CIF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seguro sobre CIF": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.frete_importado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Frete Importado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "frete importado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.seguro_importado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Seguro Importado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seguro importado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato exportacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fato_exportacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Data"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fato_exportacao.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.UF_do_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "UF do Produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "UF do produto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.paíse": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Países"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "paíse": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.código_NCM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Código NCM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "código NCM": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.descrição_NCM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Descrição NCM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descrição NCM": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.valor_US_FOB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Valor US$ FOB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor US$ FOB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor us dollar fob": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.quilograma_líquido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Quilograma Líquido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quilograma líquido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.fluxo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "Fluxo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fluxo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_exportacao.UF_para_mapa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_exportacao",
+			          "ConceptualProperty": "UF para Mapa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "UF para mapa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato importacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fato_importacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Data"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fato_importacao.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.UF_do_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "UF do Produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "UF do produto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.paíse": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Países"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "paíse": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.código_NCM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Código NCM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "código NCM": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.descrição_NCM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Descrição NCM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descrição NCM": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.valor_US_FOB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Valor US$ FOB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor US$ FOB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor us dollar fob": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.US_frete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "US$ Frete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "US$ frete": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "us dollar frete": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.US_seguro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "US$ Seguro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "US$ seguro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "us dollar seguro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.valor_US_CIF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Valor US$ CIF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor US$ CIF": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor us dollar cif": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.quilograma_líquido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Quilograma Líquido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quilograma líquido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.fluxo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "Fluxo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fluxo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_importacao.UF_para_mapa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_importacao",
+			          "ConceptualProperty": "UF para Mapa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "UF para mapa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_paise": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_paises"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim paise": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_paises": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_paise.paíse": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_paises",
+			          "ConceptualProperty": "Países"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "paíse": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ncm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ncm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim ncm": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_ncm": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ncm.código_NCM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ncm",
+			          "ConceptualProperty": "Código NCM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "código NCM": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ncm.descrição_NCM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ncm",
+			          "ConceptualProperty": "Descrição NCM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descrição NCM": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_uf"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim uf": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_uf": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_uf.uf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_uf",
+			          "ConceptualProperty": "UF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "state or province": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "dim_uf.país": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_uf",
+			          "ConceptualProperty": "País"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "país": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    }
+			  },
+			  "Relationships": {
+			    "fato_importacao_has_dim_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "dim_uf": {
+			          "Target": {
+			            "Entity": "dim_uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "dim_uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_dim_ufs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_uf"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ufs_have_fato_importacaos"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_dim_ncm": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "dim_ncm": {
+			          "Target": {
+			            "Entity": "dim_ncm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "dim_ncm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_dim_ncms"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ncm"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ncms_have_fato_importacaos"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_dim_paise": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "dim_paise": {
+			          "Target": {
+			            "Entity": "dim_paise"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "dim_paise"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_dim_paises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_paise"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_paises_have_fato_importacaos"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          },
+			          "Nouns": [
+			            {
+			              "data": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fato_importacaos"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_dim_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "dim_uf": {
+			          "Target": {
+			            "Entity": "dim_uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "dim_uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_dim_ufs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_uf"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ufs_have_fato_exportacaos"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_dim_ncm": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "dim_ncm": {
+			          "Target": {
+			            "Entity": "dim_ncm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "dim_ncm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_dim_ncms"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ncm"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ncms_have_fato_exportacaos"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_dim_paise": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "dim_paise": {
+			          "Target": {
+			            "Entity": "dim_paise"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "dim_paise"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_dim_paises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_paise"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_paises_have_fato_exportacaos"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          },
+			          "Nouns": [
+			            {
+			              "data": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fato_exportacaos"
+			        }
+			      ]
+			    },
+			    "dim_uf_has_país": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_uf"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_uf": {
+			          "Target": {
+			            "Entity": "dim_uf"
+			          }
+			        },
+			        "dim_uf.país": {
+			          "Target": {
+			            "Entity": "dim_uf.país"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_uf"
+			            },
+			            "Object": {
+			              "Role": "dim_uf.país"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ufs_have_país"
+			        }
+			      ]
+			    },
+			    "dim_uf_has_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_uf"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_uf": {
+			          "Target": {
+			            "Entity": "dim_uf"
+			          }
+			        },
+			        "dim_uf.uf": {
+			          "Target": {
+			            "Entity": "dim_uf.uf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_uf"
+			            },
+			            "Object": {
+			              "Role": "dim_uf.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ufs_have_ufs"
+			        }
+			      ]
+			    },
+			    "dim_ncm_has_descrição_NCM": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_ncm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_ncm": {
+			          "Target": {
+			            "Entity": "dim_ncm"
+			          }
+			        },
+			        "dim_ncm.descrição_NCM": {
+			          "Target": {
+			            "Entity": "dim_ncm.descrição_NCM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ncm"
+			            },
+			            "Object": {
+			              "Role": "dim_ncm.descrição_NCM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ncms_have_descrição_NCMs"
+			        }
+			      ]
+			    },
+			    "dim_ncm_has_código_NCM": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_ncm"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_ncm": {
+			          "Target": {
+			            "Entity": "dim_ncm"
+			          }
+			        },
+			        "dim_ncm.código_NCM": {
+			          "Target": {
+			            "Entity": "dim_ncm.código_NCM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ncm"
+			            },
+			            "Object": {
+			              "Role": "dim_ncm.código_NCM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ncms_have_código_NCMs"
+			        }
+			      ]
+			    },
+			    "dim_paise_has_paíse": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_paises"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_paise": {
+			          "Target": {
+			            "Entity": "dim_paise"
+			          }
+			        },
+			        "dim_paise.paíse": {
+			          "Target": {
+			            "Entity": "dim_paise.paíse"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_paise"
+			            },
+			            "Object": {
+			              "Role": "dim_paise.paíse"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_paises_have_países"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_UF_para_mapa": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.UF_para_mapa": {
+			          "Target": {
+			            "Entity": "fato_importacao.UF_para_mapa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.UF_para_mapa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_UF_para_mapas"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_fluxo": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.fluxo": {
+			          "Target": {
+			            "Entity": "fato_importacao.fluxo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.fluxo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_fluxos"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_quilograma_líquido": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.quilograma_líquido": {
+			          "Target": {
+			            "Entity": "fato_importacao.quilograma_líquido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.quilograma_líquido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_quilograma_líquidos"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_valor_US_CIF": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.valor_US_CIF": {
+			          "Target": {
+			            "Entity": "fato_importacao.valor_US_CIF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.valor_US_CIF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_valor_US_CIF"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_US_seguro": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.US_seguro": {
+			          "Target": {
+			            "Entity": "fato_importacao.US_seguro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.US_seguro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_US_seguros"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_US_frete": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.US_frete": {
+			          "Target": {
+			            "Entity": "fato_importacao.US_frete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.US_frete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_US_fretes"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_valor_US_FOB": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.valor_US_FOB": {
+			          "Target": {
+			            "Entity": "fato_importacao.valor_US_FOB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.valor_US_FOB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_valor_US_FOBs"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_descrição_NCM": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.descrição_NCM": {
+			          "Target": {
+			            "Entity": "fato_importacao.descrição_NCM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.descrição_NCM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_descrição_NCMs"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.mê": {
+			          "Target": {
+			            "Entity": "fato_importacao.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_mê"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.ano": {
+			          "Target": {
+			            "Entity": "fato_importacao.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_anos"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_data": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "fato_importacao.data": {
+			          "Target": {
+			            "Entity": "fato_importacao.data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "fato_importacao.data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_data"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_UF_para_mapa": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "fato_exportacao.UF_para_mapa": {
+			          "Target": {
+			            "Entity": "fato_exportacao.UF_para_mapa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao.UF_para_mapa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_UF_para_mapas"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_fluxo": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "fato_exportacao.fluxo": {
+			          "Target": {
+			            "Entity": "fato_exportacao.fluxo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao.fluxo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_fluxos"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_quilograma_líquido": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "fato_exportacao.quilograma_líquido": {
+			          "Target": {
+			            "Entity": "fato_exportacao.quilograma_líquido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao.quilograma_líquido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_quilograma_líquidos"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_valor_US_FOB": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "fato_exportacao.valor_US_FOB": {
+			          "Target": {
+			            "Entity": "fato_exportacao.valor_US_FOB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao.valor_US_FOB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_valor_US_FOBs"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_descrição_NCM": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "fato_exportacao.descrição_NCM": {
+			          "Target": {
+			            "Entity": "fato_exportacao.descrição_NCM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao.descrição_NCM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_descrição_NCMs"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "fato_exportacao.mê": {
+			          "Target": {
+			            "Entity": "fato_exportacao.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_mê"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "fato_exportacao.ano": {
+			          "Target": {
+			            "Entity": "fato_exportacao.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_anos"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_data": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "fato_exportacao.data": {
+			          "Target": {
+			            "Entity": "fato_exportacao.data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "fato_exportacao.data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_data"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_seguro_importado": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.seguro_importado": {
+			          "Target": {
+			            "Entity": "medida.seguro_importado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.seguro_importado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_seguro_importado"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_frete_importado": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.frete_importado": {
+			          "Target": {
+			            "Entity": "medida.frete_importado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.frete_importado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_frete_importado"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_seguro_sobre_CIF": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.seguro_sobre_CIF": {
+			          "Target": {
+			            "Entity": "medida.seguro_sobre_CIF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.seguro_sobre_CIF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_seguro_sobre_CIF"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_frete_sobre_CIF": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.frete_sobre_CIF": {
+			          "Target": {
+			            "Entity": "medida.frete_sobre_CIF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.frete_sobre_CIF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_frete_sobre_CIF"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_CIF_por_kg_importado": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.CIF_por_kg_importado": {
+			          "Target": {
+			            "Entity": "medida.CIF_por_kg_importado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.CIF_por_kg_importado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_CIF_por_kg_importado"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_FOB_por_kg_exportado": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.FOB_por_kg_exportado": {
+			          "Target": {
+			            "Entity": "medida.FOB_por_kg_exportado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.FOB_por_kg_exportado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_FOB_por_kg_exportado"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_FOB_por_kg_importado": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.FOB_por_kg_importado": {
+			          "Target": {
+			            "Entity": "medida.FOB_por_kg_importado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.FOB_por_kg_importado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_FOB_por_kg_importado"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_exportações_FOB": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.exportações_FOB": {
+			          "Target": {
+			            "Entity": "medida.exportações_FOB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.exportações_FOB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_exportações_FOB"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_volume_exportado": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.volume_exportado": {
+			          "Target": {
+			            "Entity": "medida.volume_exportado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.volume_exportado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_volume_exportado"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_total_importado_kg": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.total_importado_kg": {
+			          "Target": {
+			            "Entity": "medida.total_importado_kg"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.total_importado_kg"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_total_importado_kg"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_total_exportado_kg": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.total_exportado_kg": {
+			          "Target": {
+			            "Entity": "medida.total_exportado_kg"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.total_exportado_kg"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_total_exportado_kg"
+			        }
+			      ]
+			    },
+			    "medida_has_crescimento_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.crescimento_YoY_": {
+			          "Target": {
+			            "Entity": "medida.crescimento_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.crescimento_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_crescimento_YoY_"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_valor_US_ano_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.valor_US_ano_anterior": {
+			          "Target": {
+			            "Entity": "medida.valor_US_ano_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.valor_US_ano_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_valor_US_ano_anterior"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_preço_médio_exportação_US_KG": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.preço_médio_exportação_US_KG": {
+			          "Target": {
+			            "Entity": "medida.preço_médio_exportação_US_KG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.preço_médio_exportação_US_KG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_preço_médio_exportação_US_KG"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_peso_frete": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.peso_frete": {
+			          "Target": {
+			            "Entity": "medida.peso_frete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.peso_frete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have__peso_frete"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_ticket_médio_logístico": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.ticket_médio_logístico": {
+			          "Target": {
+			            "Entity": "medida.ticket_médio_logístico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.ticket_médio_logístico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_ticket_médio_logístico"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_total_exportado_US": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.total_exportado_US": {
+			          "Target": {
+			            "Entity": "medida.total_exportado_US"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.total_exportado_US"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_total_exportado_US"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_total_importado_US": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.total_importado_US": {
+			          "Target": {
+			            "Entity": "medida.total_importado_US"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.total_importado_US"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_total_importado_US"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_saldo_comercial": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.saldo_comercial": {
+			          "Target": {
+			            "Entity": "medida.saldo_comercial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.saldo_comercial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_saldo_comercial"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_saldo_comercial": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.saldo_comercial": {
+			          "Target": {
+			            "Entity": "medida.saldo_comercial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.saldo_comercial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_saldo_comercial"
+			        }
+			      ]
+			    },
+			    "fato_importacao_has_medida_corrente_do_comercio": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_importacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_importacao": {
+			          "Target": {
+			            "Entity": "fato_importacao"
+			          }
+			        },
+			        "medida.corrente_do_comercio": {
+			          "Target": {
+			            "Entity": "medida.corrente_do_comercio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_importacao"
+			            },
+			            "Object": {
+			              "Role": "medida.corrente_do_comercio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_importacaos_have_corrente_do_comercio"
+			        }
+			      ]
+			    },
+			    "fato_exportacao_has_medida_corrente_do_comercio": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exportacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exportacao": {
+			          "Target": {
+			            "Entity": "fato_exportacao"
+			          }
+			        },
+			        "medida.corrente_do_comercio": {
+			          "Target": {
+			            "Entity": "medida.corrente_do_comercio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exportacao"
+			            },
+			            "Object": {
+			              "Role": "medida.corrente_do_comercio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exportacaos_have_corrente_do_comercio"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_dia_semana_abrev": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.dia_semana_abrev": {
+			          "Target": {
+			            "Entity": "dim_calendario.dia_semana_abrev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.dia_semana_abrev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dia_semana_abrevs"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_dia_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.dia_semana": {
+			          "Target": {
+			            "Entity": "dim_calendario.dia_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.dia_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dia_semanas"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_dia_semana_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.dia_semana_num": {
+			          "Target": {
+			            "Entity": "dim_calendario.dia_semana_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.dia_semana_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dia_semana_nums"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_trimestre_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.trimestre_ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.trimestre_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.trimestre_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_trimestre_anos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_ano_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.ano_me": {
+			          "Target": {
+			            "Entity": "dim_calendario.ano_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.ano_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_ano_me"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_ano_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.ano_mes_num": {
+			          "Target": {
+			            "Entity": "dim_calendario.ano_mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.ano_mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_ano_mes_nums"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_abrev": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_abrev": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_abrev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_abrev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_abrevs"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_nome_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.nome_me": {
+			          "Target": {
+			            "Entity": "dim_calendario.nome_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.nome_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_nome_me"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_num": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_nums"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.trimestre": {
+			          "Target": {
+			            "Entity": "dim_calendario.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_anos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.date": {
+			          "Target": {
+			            "Entity": "dim_calendario.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dates"
+			        }
+			      ]
+			    },
+			    "dim_uf_in_país": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_uf"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_uf": {
+			          "Target": {
+			            "Entity": "dim_uf"
+			          }
+			        },
+			        "dim_uf.país": {
+			          "Target": {
+			            "Entity": "dim_uf.país"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_uf.país"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_uf"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_uf.país"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ufs_are_in_país"
+			        }
+			      ]
+			    },
+			    "dim_uf_in_uf": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_uf"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_uf": {
+			          "Target": {
+			            "Entity": "dim_uf"
+			          }
+			        },
+			        "dim_uf.uf": {
+			          "Target": {
+			            "Entity": "dim_uf.uf"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_uf.uf"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_uf"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_uf.uf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ufs_are_in_ufs"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
 			}
 		contentType: json
 

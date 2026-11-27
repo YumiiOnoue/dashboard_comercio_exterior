@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "ca9b1a4511c19de740a0",
   "position": {
-    "x": 648.5,
-    "y": 176.25,
+    "x": 648.39550814600534,
+    "y": 26.330782056690573,
     "z": 2000,
-    "height": 144,
-    "width": 175,
-    "tabOrder": 2000
+    "height": 144.81930131179817,
+    "width": 174.44143112557506,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -58,7 +58,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -100,7 +107,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -115,9 +122,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#3D8553'"
                     }
                   }
                 }
@@ -128,7 +134,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D8553'"
+                      "Value": "null"
                     }
                   }
                 }
@@ -144,7 +150,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -186,7 +192,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D8553'"
+                      "Value": "'#F5F4EF'"
                     }
                   }
                 }
@@ -195,7 +201,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "25D"
+                  "Value": "6D"
                 }
               }
             },
@@ -252,8 +258,39 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cf1e1b1cb8a983b4d35e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Saldo Comercial"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

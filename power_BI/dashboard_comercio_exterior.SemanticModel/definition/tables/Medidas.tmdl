@@ -13,13 +13,13 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure 'Total Importado US$' = CALCULATE(SUM(fato_comercio[Valor US$ FOB]), fato_comercio[Fluxo]="Importação")
+	measure 'Total Importado US$' = CALCULATE(SUM(fato_importacao[Valor US$ FOB]))
 		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 27630a56-5d4e-46cf-9db6-df398cd186db
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure 'Total Exportado US$' = CALCULATE(SUM(fato_comercio[Valor US$ FOB]), fato_comercio[Fluxo]= "Exportação")
+	measure 'Total Exportado US$' = CALCULATE(SUM(fato_exportacao[Valor US$ FOB]))
 		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 571836f1-5816-4bec-a2d9-b4ff629545eb
 
@@ -28,8 +28,8 @@ table Medidas
 	measure 'Ticket Médio Logístico' = ```
 			
 			DIVIDE(
-			    SUM(Fato_Comercio[US$ Frete]) + SUM(Fato_Comercio[US$ Seguro]), 
-			    SUM(Fato_Comercio[Quilograma Líquido])
+			    SUM(fato_importacao[US$ Frete]) + SUM(fato_importacao[US$ Seguro]), 
+			    SUM(fato_importacao[Quilograma Líquido])
 			)
 			```
 		lineageTag: 14154dee-7776-4bff-a68e-79ff29880b41
@@ -38,16 +38,16 @@ table Medidas
 
 	measure '% Peso Frete' =
 			
-			DIVIDE(SUM(Fato_Comercio[US$ Frete]), SUM(Fato_Comercio[Valor US$ CIF]))
+			DIVIDE(SUM(fato_importacao[US$ Frete]), SUM(fato_importacao[Valor US$ CIF]))
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: e89e694d-bf99-44c4-b1bb-1f3e8fbfba68
 
-	measure 'Preço Médio KG' = DIVIDE(SUM(Fato_Comercio[Valor US$ FOB]), SUM(Fato_Comercio[Quilograma Líquido]))
+	measure 'Preço Médio Exportação (US$/KG)' = DIVIDE(SUM(fato_exportacao[Valor US$ FOB]), SUM(fato_exportacao[Quilograma Líquido]))
 		lineageTag: f32ead0e-5ed8-435e-a155-eddf299fd576
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Valor US$ Ano Anterior' = CALCULATE(SUM(Fato_Comercio[Valor US$ FOB]), SAMEPERIODLASTYEAR('Calendario'[Date]))
+	measure 'Valor US$ Ano Anterior' = CALCULATE(SUM(fato_exportacao[Valor US$ FOB]), SAMEPERIODLASTYEAR('dim_calendario'[Date]))
 		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 94257469-7bd1-4dd3-a0a4-f06b4e7e0565
 
@@ -66,6 +66,86 @@ table Medidas
 			```
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: b331fe4d-b0aa-4d6d-b668-7b203c35e87c
+
+	measure 'Total Exportado kg' = CALCULATE(SUM(fato_exportacao[Quilograma Líquido]))
+		formatString: #,0
+		lineageTag: 8962befb-8ccd-4451-98f8-e917d864d91d
+
+	measure 'Total Importado kg' = CALCULATE(SUM(fato_importacao[Quilograma Líquido]))
+		formatString: #,0
+		lineageTag: 87108339-a98b-4403-a9b3-bb5089c13405
+
+	measure 'Volume Exportado' =
+			
+			SUM(fato_exportacao[Quilograma Líquido])
+		formatString: 0
+		lineageTag: a4935dc2-53a8-49d9-8b89-0a8d1e4b92ce
+
+	measure 'Exportações FOB' =
+			
+			SUM(fato_exportacao[Valor US$ FOB])
+		formatString: 0
+		lineageTag: b52c2161-16eb-4b1b-987d-692affcb72fb
+
+	measure 'FOB por Kg Importado' =
+			
+			DIVIDE(
+			    SUM(fato_importacao[Valor US$ FOB]),
+			    SUM(fato_importacao[Quilograma Líquido])
+			)
+		lineageTag: 9a00a319-5b8e-44de-b96d-e6577260755a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'FOB por Kg Exportado' =
+			
+			DIVIDE(
+			    SUM(fato_exportacao[Valor US$ FOB]),
+			    SUM(fato_exportacao[Quilograma Líquido])
+			)
+		lineageTag: 1f42e896-e59f-4683-854c-897c7180bb6c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CIF por Kg Importado' =
+			
+			DIVIDE(
+			    SUM(fato_importacao[Valor US$ CIF]),
+			    SUM(fato_importacao[Quilograma Líquido])
+			)
+		lineageTag: 1ef61200-bc70-4b7e-8e6d-35ac3ee3ec73
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Frete sobre CIF' =
+			
+			DIVIDE(
+			    SUM(fato_importacao[US$ Frete]),
+			    SUM(fato_importacao[Valor US$ CIF])
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f5866b02-ad76-41fb-aa50-42543e04dd12
+
+	measure 'Seguro sobre CIF' =
+			
+			DIVIDE(
+			    SUM(fato_importacao[US$ Seguro]),
+			    SUM(fato_importacao[Valor US$ CIF])
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 30c151fc-b250-4160-8ec2-245c1f6cda13
+
+	measure 'Frete Importado' =
+			
+			SUM(fato_importacao[US$ Frete])
+		formatString: 0
+		lineageTag: 76b55c56-4703-443f-8bfe-b00dd3563891
+
+	measure 'Seguro Importado' =
+			
+			SUM(fato_importacao[US$ Seguro])
+		formatString: 0
+		lineageTag: d1a21c95-2933-4f8d-b73d-b6283c23daf3
 
 	partition Medidas = m
 		mode: import

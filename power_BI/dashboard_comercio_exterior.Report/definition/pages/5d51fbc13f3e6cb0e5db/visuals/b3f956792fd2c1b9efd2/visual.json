@@ -1,44 +1,33 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "b3f956792fd2c1b9efd2",
   "position": {
-    "x": 224,
-    "y": 368,
+    "x": 209.00058257498142,
+    "y": 182.66980051829086,
     "z": 3000,
-    "height": 336,
-    "width": 624,
-    "tabOrder": 3000
+    "height": 245,
+    "width": 1054.8769561461661,
+    "tabOrder": 6000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Calendario"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Hierarquia de datas"
+                    "SourceRef": {
+                      "Entity": "dim_calendario"
                     }
                   },
-                  "Level": "Ano"
+                  "Property": "Ano"
                 }
               },
-              "queryRef": "Calendario.Date.Variation.Hierarquia de datas.Ano",
-              "nativeQueryRef": "Date Ano",
+              "queryRef": "dim_calendario.Ano",
+              "nativeQueryRef": "Ano",
               "active": true
             }
           ]
@@ -53,11 +42,25 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Saldo Comercial"
+                  "Property": "Total Exportado US$"
                 }
               },
-              "queryRef": "Medidas.Saldo Comercial",
-              "nativeQueryRef": "Saldo Comercial"
+              "queryRef": "Medidas.Total Exportado US$",
+              "nativeQueryRef": "Total Exportado US$"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Total Importado US$"
+                }
+              },
+              "queryRef": "Medidas.Total Importado US$",
+              "nativeQueryRef": "Total Importado US$"
             }
           ]
         }
@@ -66,27 +69,16 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Measure": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Calendario"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "Date"
-                      }
-                    },
-                    "Hierarchy": "Hierarquia de datas"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Level": "Ano"
+                "Property": "Total Exportado US$"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ],
         "isDefaultSort": true
@@ -188,9 +180,6 @@
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "Medidas.Saldo Comercial"
           }
         },
         {
@@ -200,12 +189,33 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D8553'"
+                      "Value": "'#D5A64A'"
                     }
                   }
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "Medidas.Total Importado US$"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#56866B'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Total Exportado US$"
           }
         }
       ]
@@ -224,7 +234,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "25D"
+                  "Value": "6D"
                 }
               }
             },
@@ -240,7 +250,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D8553'"
+                      "Value": "'#F5F4EF'"
                     }
                   }
                 }
@@ -258,7 +268,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.6
                     }
                   }
                 }
@@ -269,7 +279,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D8553'"
+                      "Value": "null"
                     }
                   }
                 }
@@ -278,7 +288,7 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "'left'"
                 }
               }
             },
@@ -291,8 +301,67 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2f324b33eb3e492cf401",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "Ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "58287540b0ef767c14cc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Exportado US$"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ad99b7e61c0869d63d6e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Importado US$"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

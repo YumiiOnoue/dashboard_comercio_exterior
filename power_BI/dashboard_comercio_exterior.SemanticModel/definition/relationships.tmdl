@@ -1,9 +1,32 @@
-relationship e4b2140e-7a6d-404d-a535-cfb1996b8116
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Calendario.Date
-	toColumn: LocalDateTable_099889f4-0d50-484f-b2dd-716c038c24d9.Date
+relationship 91896302-2dd7-1e58-21c0-a4bc9e5c6364
+	fromColumn: fato_exportacao.Data
+	toColumn: dim_calendario.Date
 
-relationship 27ec7866-bf30-fd4c-73d8-b84f73a48b8f
-	fromColumn: fato_comercio.Data
-	toColumn: Calendario.Date
+relationship 765964f2-9115-4285-af1f-4550dcf9e66c
+	fromColumn: fato_importacao.Data
+	toColumn: dim_calendario.Date
+
+relationship AutoDetected_0479a84e-f190-4cd7-b4a8-4f1caab142dd
+	fromColumn: fato_exportacao.Países
+	toColumn: dim_paises.Países
+
+relationship AutoDetected_4b4670ba-89bf-44fe-90ec-45de80bece66
+	fromColumn: fato_importacao.Países
+	toColumn: dim_paises.Países
+
+relationship AutoDetected_8e82ff6e-464d-482d-a7b0-2a7e9ce7e067
+	fromColumn: fato_exportacao.'Código NCM'
+	toColumn: dim_ncm.'Código NCM'
+
+relationship AutoDetected_03ae7111-a990-4e75-a0c6-fcb41cc26e59
+	fromColumn: fato_importacao.'Código NCM'
+	toColumn: dim_ncm.'Código NCM'
+
+relationship 32f4ed3a-c43c-0a2a-32ec-702207367dac
+	fromColumn: fato_exportacao.'UF do Produto'
+	toColumn: dim_uf.UF
+
+relationship 74186dcc-e2dd-3bc0-6bf9-f1af2b760c89
+	fromColumn: fato_importacao.'UF do Produto'
+	toColumn: dim_uf.UF
 

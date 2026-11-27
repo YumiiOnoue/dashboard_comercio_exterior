@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "a9f293da54937d33e7d8",
   "position": {
-    "x": 224,
-    "y": 176,
+    "x": 227.1029952389562,
+    "y": 26.330782056690573,
     "z": 0,
-    "height": 144,
-    "width": 176,
-    "tabOrder": 0
+    "height": 144.81930131179817,
+    "width": 176.08710500411823,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "card",
@@ -58,7 +58,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -100,7 +107,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "25D"
+                  "Value": "6D"
                 }
               }
             },
@@ -109,7 +116,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D8553'"
+                      "Value": "'#F5F4EF'"
                     }
                   }
                 }
@@ -131,7 +138,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -154,7 +161,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D8553'"
+                      "Value": "null"
                     }
                   }
                 }
@@ -164,9 +171,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#3D8553'"
                     }
                   }
                 }
@@ -175,7 +181,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -225,8 +231,39 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c936ba0b86dfb2601fce",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Exportado US$"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -5,42 +5,93 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 32.25
       },
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 90
+            "x": 602,
+            "y": 32.25
           },
-          "nodeIndex": "Calendario",
-          "nodeLineageTag": "62556162-647c-428f-bb88-72f3eb6ee852",
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "1f4d13c8-efc2-4354-a327-7b9494e2cd09",
           "size": {
-            "height": 200,
+            "height": 222,
             "width": 234
           },
           "zIndex": 2
         },
         {
           "location": {
-            "x": 284,
-            "y": 0
+            "x": 270,
+            "y": 29.25
           },
-          "nodeIndex": "fato_comercio",
-          "nodeLineageTag": "32bb1029-edfe-471b-9969-238ecc50722b",
+          "nodeIndex": "dim_calendario",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 909,
+            "y": 217.25
+          },
+          "nodeIndex": "fato_exportacao",
+          "nodeLineageTag": "f68853f3-e83d-4f7e-aa56-b00aed1bafc3",
           "size": {
             "height": 300,
+            "width": 270
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 228.25
+          },
+          "nodeIndex": "fato_importacao",
+          "nodeLineageTag": "80edbee3-1513-40f5-b9eb-836f5958241b",
+          "size": {
+            "height": 300,
+            "width": 288
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 499,
+            "y": 622.65000152587891
+          },
+          "nodeIndex": "dim_paises",
+          "nodeLineageTag": "982cbd47-810d-4580-abe2-d09c08bc17a0",
+          "size": {
+            "height": 145,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 558,
-            "y": 102
+            "x": 245,
+            "y": 638.54999828338623
           },
-          "nodeIndex": "Medidas",
-          "nodeLineageTag": "1f4d13c8-efc2-4354-a327-7b9494e2cd09",
+          "nodeIndex": "dim_ncm",
+          "nodeLineageTag": "d88116c8-40c4-416b-9e5d-312899395f73",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 761.80000305175781,
+            "y": 629.75
+          },
+          "nodeIndex": "dim_uf",
+          "nodeLineageTag": "dd28554a-1edb-47d0-a343-6b7c27846571",
           "size": {
             "height": 104,
             "width": 234
@@ -50,7 +101,7 @@
       ],
       "name": "Todas as tabelas",
       "zoomValue": 100,
-      "pinKeyFieldsToTop": false,
+      "pinKeyFieldsToTop": true,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
       "tablesLocked": false
